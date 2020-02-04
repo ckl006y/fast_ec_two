@@ -4,6 +4,9 @@ import android.content.Context;
 
 import java.util.WeakHashMap;
 
+/**
+ * 测试同步
+ */
 public final class Latte {
     public static Configurator init(Context context) {
 
