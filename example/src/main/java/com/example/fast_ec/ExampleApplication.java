@@ -2,7 +2,6 @@ package com.example.fast_ec;
 
 import android.app.Application;
 
-import com.example.ck_core.app.Configurator;
 import com.example.ck_core.app.Latte;
 
 public class ExampleApplication extends Application {
@@ -12,7 +11,5 @@ public class ExampleApplication extends Application {
         Latte.init(this)
                 .withApiHost("http://mock.fulingjie.com/mock-android/")
                 .configure();
-
-
     }
 }

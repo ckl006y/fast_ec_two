@@ -1,15 +1,13 @@
 package com.example.ck_core.app;
 
-import com.joanzapata.iconify.IconFontDescriptor;
-import com.joanzapata.iconify.Iconify;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.WeakHashMap;
 
 public class Configurator {
 
-    private static final WeakHashMap<String,Object> LATTE_CONFIGS = new WeakHashMap<>();
-    private static final ArrayList<IconFontDescriptor> ICONS = new ArrayList<>();
+    private static final HashMap<String,Object> LATTE_CONFIGS = new HashMap<>();
 
     public Configurator() {
         LATTE_CONFIGS.put(ConfigType.CONFIG_READY.name(),false);
@@ -19,7 +17,7 @@ public class Configurator {
         return Holder.INSTANCE;
     }
 
-    public final WeakHashMap<String,Object> getConFigs(){
+    public final HashMap<String,Object> getConFigs(){
         return LATTE_CONFIGS;
     }
 
@@ -49,9 +47,6 @@ public class Configurator {
         return (T) LATTE_CONFIGS.get(key.name());
     }
 
-    private void initIcons(){
-        if(ICONS.size()>0){
-            final Iconify.IconifyInitializer initializer = Iconify.with(ICONS.get(0));
-        }
-    }
+
+
 }
