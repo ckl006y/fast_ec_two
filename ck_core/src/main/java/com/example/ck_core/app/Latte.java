@@ -19,6 +19,11 @@ public final class Latte {
         return Configurator.getInstance().getConFigs();
     }
 
+    public static <T> T getConfig(ConfigType type){
+        T object = (T) getConfigurations().get(type.name());
+        return object;
+    }
+
     public static Context getApplication(){
         return (Context) getConfigurations().get(ConfigType.APPLICATION_CONTEXT);
     }
